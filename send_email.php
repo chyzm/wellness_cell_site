@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "healthritenig@gmail.com";
+    $to = "suavedef@gmail.com";
     $userEmail = $_POST['email'];
     $subject = "Daily Wellness Report Submission";
     
