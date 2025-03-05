@@ -1,20 +1,30 @@
 function sendToWhatsApp(event) {
-    event.preventDefault(); // Prevent the default form submission
+  event.preventDefault();
 
-    const form = document.getElementById('wellnessForm');
-    const formData = new FormData(form);
+  const form = document.getElementById('wellnessForm');
+  const formData = new FormData(form);
 
-    let message = "Wellness Cell Site Daily Report:\n\n";
+  let message = "Wellness Cell Site Daily Report:\n\n";
 
-    formData.forEach((value, key) => {
-        message += `${key}: ${value}\n`;
-    });
+  // Get all the labels from the form
+  const labels = {};
+  form.querySelectorAll('label').forEach(label => {
+      const inputId = label.htmlFor;
+      if (inputId) {
+          labels[inputId] = label.textContent;
+      }
+  });
 
-    const whatsappNumber = "2347031016787"; // Your WhatsApp number
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  formData.forEach((value, key) => {
+      const question = labels[key] || key; // Use label if found, otherwise use the key
+      message += `${question}: *${value}*\n`; // Make the value bold
+  });
 
-    window.open(whatsappURL, '_blank'); // Open WhatsApp in a new tab
+  const whatsappNumber = "2347031016787";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, '_blank');
 }
 
 function toggleContactOptions() {
