@@ -22,7 +22,7 @@ function sendToWhatsApp(event) {
 
   formData.forEach((value, key) => {
       const question = labels[key] || key;
-      message += `${question}: *${value}*\n`;
+      message += `${question}: *${value}*\n\n`;
   });
 
   const whatsappNumber = "2347031016787";
