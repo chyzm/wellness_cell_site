@@ -25,7 +25,7 @@ function sendToWhatsApp(event) {
       message += `${question}: *${value}*\n\n`;
   });
 
-  const whatsappNumber = "2347031016787";
+  const whatsappNumber = "2349061772005";
   const encodedMessage = encodeURIComponent(message);
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
