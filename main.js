@@ -9,15 +9,20 @@ function sendToWhatsApp(event) {
   // Get all the labels from the form
   const labels = {};
   form.querySelectorAll('label').forEach(label => {
-      const inputId = label.htmlFor;
-      if (inputId) {
-          labels[inputId] = label.textContent;
+      if (label.htmlFor) { // Check if label has htmlFor attribute
+          const inputElement = document.getElementById(label.htmlFor);
+          if (inputElement) { // Check if element is found
+              const inputName = inputElement.getAttribute('name');
+              if (inputName) {
+                  labels[inputName] = label.textContent;
+              }
+          }
       }
   });
 
   formData.forEach((value, key) => {
-      const question = labels[key] || key; // Use label if found, otherwise use the key
-      message += `${question}: *${value}*\n`; // Make the value bold
+      const question = labels[key] || key;
+      message += `${question}: *${value}*\n`;
   });
 
   const whatsappNumber = "2347031016787";
