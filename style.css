@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    margin: auto;
+    border-left: 5px solid #007bff;
+    border-right: 5px solid #dc3545;
+}
+h2 {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 255, 0, 0.5);
+    border: 3px solid green;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+input, textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+.inline-group {
+    display: flex;
+    gap: 10px;
+}
+.inline-group input {
+    flex: 1;
+}
+fieldset {
+    border: 2px solid #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+legend {
+    font-weight: bold;
+    color: #007bff;
+}
+button {
+    background: linear-gradient(to right, #007bff, #dc3545);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+footer {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  /* Social icons in Footer (for small screens) */
+  .footer-social {
+    display: none;
+    margin-top: 10px;
+  }
+  .footer-social a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  .footer-social a:hover {
+    color: #4CAF50;
+  }
+
+  /* CONTACT BUTTON CONTAINER (Bottom Left) */
+.buttons-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons-backToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  
+  
+  .contact-btn {
+    /* Remove position: fixed */
+    background: linear-gradient(90deg, #4CAF50, #fff);
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  /* CONTACT MODAL OPTIONS */
+  .contact-modal {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+  }
+  .contact-modal a {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: green;
+  }
+  .contact-modal a:last-child {
+    border-bottom: none;
+  }
+  
+  
+  #backToTop {
+    /* Remove position: fixed */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, green, white);
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-btn, #backToTop {
+    padding: 10px 15px; /* Adjust base padding */
+    font-size: 16px; /* Adjust base font size */
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 80%;
+    }
+    input, textarea {
+        width: calc(100% - 10px);
+    }
+    .inline-group {
+        flex-direction: column;
+    }
+
+    .contact-btn, #backToTop {
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}

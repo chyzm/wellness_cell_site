@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Cell Site Daily Report</title>
+    <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-o8C12jaEOUtm+P+fGZ9o4FGArEHVJ5/cMsZLfwWksHn2x+/TFXqv5HzCZWiwvFzjPAb06fL2qKmxT0VHe3D1Qg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <form id="wellnessForm" action="send_email.php" method="POST">
+        <h2>Wellness Cell Site Daily Report Template 2025</h2>
+        
+        <label for="name">Wellness Cell Site Member Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <div class="inline-group">
+            <label for="date">Today’s Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="join_date">Date you joined the WCS:</label>
+            <input type="date" id="join_date" name="join_date" required>
+        </div>
+        
+        <label for="objectives">Major Objective(s) you want to attain:</label>
+        <textarea id="objectives" name="objectives" required></textarea>
+        
+        <h3>Daily Wellness Report</h3>
+        <P>Please evaluate your performance in the following areas, on a scale from 1 to 5 (1 = Poor; 5 = Excellent). <br>
+            In addition to your score, please provide brief comments or reflections for each area.</P>
+        
+        <fieldset>
+            <legend>Nutrition</legend>
+            <label>Comments/Reflections:</label><br>
+            <label>Type of Foods:</label>
+            <input type="text" name="food_type" required>
+            
+            <label>Time of Foods:</label>
+            <input type="text" name="food_time" required>
+            
+            <label>Portion Size (Small or Medium only):</label>
+            <input type="text" name="portion_size" required>
+            
+            <label>Self Score (1-5):</label>
+            <input type="number" name="nutrition_score" min="1" max="5" required>
+            
+            
+        </fieldset>
+        
+        <fieldset>
+            <legend>Exercise & Physical Activity</legend>
+            
+            
+            <label>Comments/Reflections:</label><br>
+            <label>i. What types of physical activity did you engage in: FLEX; MAE; CVE; STR; HIIT; Cardio? </label>
+            <textarea name="exercise_comments" required></textarea>
+
+            <label>ii. Duration, Intensity and Density.</label>
+            <textarea name="exercise_comments" placeholder="seperate your responses with a comma" required></textarea>
+
+            <label>iii. Have you completed your morning and evening Exercise Sessions? </label>
+            <textarea name="exercise_comments" required></textarea>
+            <label>What about your Daily Physical Activity Requirement?</label>
+            <textarea name="exercise_comments" required></textarea>
+            <label>iv. Were you able to meet your daily exercise targets?</label>
+            <textarea name="exercise_comments" required></textarea>
+            
+            <label>Self Score (1-5):</label>
+            <input type="number" name="exercise_score" min="1" max="5" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rest & Restoration</legend>
+            
+            <label>Comments/Reflections:</label><br>
+            <label>i.Went to Bed on Time? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+
+            <label>ii. Slept between 7 and 8 Hours?</label>
+            <textarea name="Rest_&_Restoration_comments"  required></textarea>
+
+            <label>iii. Did you Sleep in a Dark Room? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            <label>iv. Did you go to bed a minimum of 3 hours after diner? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            <label>v. How many times did you wake up to visit the toilet?</label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            
+            <label>vi. Was it easy for you to resume sleep? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            <label>vii. Did you wake up feeling tired or energetic? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            <label>Did you take any break or power nap throughout the day? </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            <label>vii. Any practice of relaxation or mindfulness?  </label>
+            <textarea name="Rest_&_Restoration_comments" required></textarea>
+            
+            <label>Self Score (1-5):</label>
+            <input type="number" name="Rest_&_Restoration_comments" min="1" max="5" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Stress Management</legend>
+            
+            
+            <label>Comments/Reflections:</label><br>
+            <label>i. What were your major stressors today? </label>
+            <textarea name="Stress_Management_comments" required></textarea>
+
+            <label>ii. How did you cope with stress?</label>
+            <textarea name="Stress_Management_comments"  required></textarea>
+
+            <label>iii. Any effective techniques or strategies you used?</label>
+            <textarea name="Stress_Management_comments" required></textarea>
+
+            <label>Self Score (1-5):</label>
+            <input type="number" name="exercise_score" min="1" max="5" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Social Support & Intimacy</legend>
+            
+            <label>Comments/Reflections:</label><br>
+            <label>i.Did you reach out to friends or family today? </label>
+            <textarea name="Social_Support_&_Intimacy_comments" required></textarea>
+
+            <label>ii. Any interactions that felt particularly supportive or nurturing?</label>
+            <textarea name="Social_Support_&_Intimacy_comments"  required></textarea>
+
+            <label>iii. How many if any Connect Times you had with your Significant Other today? </label>
+            <textarea name="Social_Support_&_Intimacy_comments" required></textarea>
+            <label>iv. Are you satisfied with the quality and amount of companionship you had today? </label>
+            <textarea name="Social_Support_&_Intimacy_comments" required></textarea>
+            <label>v. Overall, were you fulfilled today? </label>
+            <textarea name="Social_Support_&_Intimacy_comments" required></textarea>
+            <label>Self Score (1-5):</label>
+            <input type="number" name="Social_Support_&_Intimacy_comments" min="1" max="5" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Avoidance of Toxic Substances</legend>
+            
+            <label>Comments/Reflections:</label><br>
+            <label>i.Did you avoid smoking direct/indirect smoking today? </label>
+            <textarea name="Avoidance_of_Toxic_Substances_comments" required></textarea>
+
+            <label>ii. Did you drink today?</label>
+            <textarea name="Avoidance_of_Toxic_Substances_comments"  required></textarea>
+            <div class="inline-group">
+                <label for="text">How many drinks?</label>
+                <input type="text" name="Avoidance_of_Toxic_Substances_comments" required>
+                
+                <label for="text">Types?</label>
+                <input type="text"  name="Avoidance_of_Toxic_Substances_comments" required>
+            </div>
+
+            <label>iii. Any other substances? </label>
+            <textarea name="Avoidance_of_Toxic_Substances_comments" required></textarea>
+            <label>iv. Any challenges/pressures in this area?  </label>
+            <textarea name="Avoidance_of_Toxic_Substances_comments" required></textarea>
+
+            <label>Self Score (1-5):</label>
+            <input type="number" name="Rest_&_Restoration_comments" min="1" max="5" required>
+            
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Overall Reflection</legend>
+            <label>Total Score (Average of all categories):</label>
+            <input type="number" name="Overall_Reflection_comments" min="1" max="30" required>
+            
+            <label>General Comments: </label>
+            <textarea name="Overall_Reflection_comments" required></textarea>
+
+            <label>What are your thoughts on today’s wellness practices?</label>
+            <textarea name="Overall_Reflection_comments"  required></textarea>
+
+            <label>What changes/improvements are you considering for the future?</label>
+            <textarea name="Overall_Reflection_comments" required></textarea>
+            <label>Overall, are you proud of your wellness performance today? </label>
+            <textarea name="Overall_Reflection_comments" required></textarea>
+        
+        </fieldset>
+
+        <fieldset>
+            <label>Signature: </label>
+            <textarea name="signature" placeholder="Full name" required></textarea>
+           
+            <label>Date:</label>
+            <input type="date" id="date"  name="date" required>
+            
+
+            <p>
+                Thank you for taking out the time to fill out this Daily Wellness Report.
+            </p>
+            <p>
+                Your reflections help us tailor your wellness journey at our Wellness Cell Site.
+            </p>
+        
+        </fieldset>
+
+
+        
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <div class="buttons-container">
+        <button class="contact-btn" onclick="toggleContactModal()">Contact</button>
+        <div class="contact-modal" id="contactModal">
+          <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+          <a href="tel:+1234567890"><i class="fas fa-phone"></i> Call Us</a>
+        </div>
+        
+      </div>
+      <div class="buttons-backToTop">
+        <button id="backToTop" onclick="scrollToTop()" style="display: none;">Top</button>
+      </div>
+      
+
+    <footer>
+    
+        <p>&copy; 2025 HealthRite Company Limited</p>
+
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </footer>
+
+      <script src="main.js"></script>
+</body>
+</html>
